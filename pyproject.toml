@@ -2,21 +2,23 @@
 name = "fishing"
 version = "0.1.0"
 description = "Neural networks to figure out fish competition."
-authors = ["Patrick Reinbold"]
-readme = "README.md"
-package-mode = false
+authors = ["Patrick Reinbold <patrick.ak.reinbold@gmail.com>"]
+package-mode = true
+packages = [
+    { include = 'fishing' }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 pandas = "^2.2.3"
-plotly = "^6.0.0"
-tensorflow = {extras = ["and-cuda"], version = "^2.19.0"}
+google-cloud-bigquery = "^3.31.0"
 
 [tool.poetry.group.dev]
 optional = true
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.1.1"
+plotly = "^6.0.1"
 
 [build-system]
 requires = ["poetry-core"]
